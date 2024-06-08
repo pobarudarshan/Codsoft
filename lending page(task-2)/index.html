@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OnePlus Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header id="header">
+        <img src="./images/logo2.png" alt="OnePlus logo" id="header-img">
+        <h1>OnePlus 6</h1>
+        <div class="user-details">
+            <span><i class="fa fa-user"></i></span>
+            <span><i class="fa fa-shopping-bag"></i></span>
+            <span>🇬🇧</span>
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li><a class="nav-link" href="#speed">Speed</a></li>
+                <li><a class="nav-link" href="#display">Display</a></li>
+                <li><a class="nav-link" href="#camera">Camera</a></li>
+                <li><a class="nav-link" href="#design">Design</a></li>
+                <li><a class="nav-link" href="#oxygenos">OxygenOS</a></li>
+                <li><a class="nav-link" href="#resistance">Resistance</a></li>
+                <li><a class="nav-link" href="#headphones">Headphones</a></li>
+            </ul>
+            <button>Buy now</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="block one">
+            <p class="d2">OnePlus 6</p>
+            <p class="d2">Lorem ipsum dolor</p>
+            <p class="d3">From Rs 18999</p>
+            <div id="block1">
+                <img src="./images/oneplus6.webp" alt="phone1">
+            </div>
+        </section>
+
+        <section class="block two">
+            <div class="thumbnail-container">
+                <button>
+                    <i class="fa fa-play"></i>
+                    <img src="./images/oneplus6res.jpg" alt="phone">
+                </button>
+                <button class="delete-btn" onclick="deleteImage(0)">X</button>
+            </div>
+            <div class="thumbnail-container">
+                <button>
+                    <i class="fa fa-play"></i>
+                    <img src="./images/pneplus6blue.jpg" alt="phone">
+                </button>
+                <button class="delete-btn" onclick="deleteImage(1)">X</button>
+            </div>
+        </section>
+
+        <section class="block three" id="speed">
+            <div>
+                <p class="d1">Fast and Smooth</p>
+                <p class="d2">The Speed You Need.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id="block3">
+                <img src="./images/fastsmooth.jpg" alt="phone3">
+            </div>
+        </section>
+
+        <section class="block four" id="display">
+            <div>
+                <p class="d1">Display</p>
+                <p class="d2">More to see.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id='block4'>
+                <img src="./images/display.jpg" alt="phone4">
+            </div>
+        </section>
+
+        <section class="block five" id="camera">
+            <div>
+                <p class="d1">Camera</p>
+                <p class="d2">Capture the moment.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id='block5'>
+                <img src="./images/onepluscamera.webp" alt="phone5">
+            </div>
+        </section>
+
+        <section class="block six" id="design">
+            <div>
+                <p class="d1">Design</p>
+                <p class="d2">Elegance in every detail.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id='block6'>
+                <img src="./images/design.jpg" alt="phone6">
+            </div>
+        </section>
+
+        <section class="block seven" id="oxygenos">
+            <div>
+                <p class="d1">OxygenOS</p>
+                <p class="d2">Pure, fast, and polished.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id='block7'>
+                <img src="./images/oxyjanos.jpg" alt="phone7">
+            </div>
+        </section>
+
+        <section class="block eight" id="resistance">
+            <div>
+                <p class="d1">Resistance</p>
+                <p class="d2">Built to last.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id='block8'>
+                <img src="./images/oneplus1.jpg" alt="phone8">
+            </div>
+        </section>
+
+        <section class="block nine" id="headphones">
+            <div>
+                <p class="d1">Headphones</p>
+                <p class="d2">Sound that moves you.</p>
+                <p class="d3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="d4"><a href="#">Learn more</a></p>
+            </div>
+            <div id='block9'>
+                <img src="./images/headphone.webp" alt="phone9">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <form action="#" method="" id="form">
+                <p>Join our newsletter</p>
+                <input type="email" name="user_mail" placeholder="e.g. johnsmith@mail.com" id="email" required>
+                <button type="submit" id="submit">Subscribe</button>
+            </form>
+
+            <div class="social-media">
+                <p>Keep updated</p>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <p>🇬🇧 United Kingdom (English / GBP)</p>
+            <p><i class="fa fa-phone"></i> +55 5555 5555555, 9:30am - 3:00am, Monday to Sunday</p>
+            <hr>
+            <span>© 2013 - 2024 OnePlus. All Rights Reserved</span>
+            <a href="#">Privacy Policy</a>
+            <a href="#">User Agreement</a>
+            <a href="#">Terms of Sales</a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
