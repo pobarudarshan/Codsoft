@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAINBUSTER</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">BRAINBUSTER</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="user.html">Categories</a></li>
+            <li id="login-link"><button onclick="window.location.href = 'login.html';">Login</button></li>
+            <li id="logout-link" style="display: none;"><button onclick="logout();">Logout</button></li>
+        </ul>
+    </nav>
+    <div class="landing">
+        <h1>Welcome to BRAINBUSTER</h1>
+        <p>Test your knowledge with fun and challenging quizzes!</p>
+        <a href="user.html" class="btn">Get Started</a>
+    </div>
+    <div id="quiz-body" style="display: none;">
+        <div id="question-container"></div>
+        <div id="navigation-buttons">
+            <button id="prev-button" onclick="prevPage()">Previous</button>
+            <button id="next-button" onclick="nextPage()">Next</button>
+            <button id="submit-button" onclick="submitQuiz()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const token = localStorage.getItem('token');
+            const loginLink = document.getElementById('login-link');
+            const logoutLink = document.getElementById('logout-link');
+            if (token) {
+                loginLink.style.display = 'none'; // Hide the login button
+                logoutLink.style.display = 'block'; // Show the logout button
+            } else {
+                loginLink.style.display = 'block'; // Show the login button
+                logoutLink.style.display = 'none'; // Hide the logout button
+            }
+        }
+
+        // Logout function to clear the token and redirect to login page
+        function logout() {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+        }
+
+        // Call checkLogin when the page loads
+        window.onload = checkLogin;
+    </script>
+</body>
+
+</html>

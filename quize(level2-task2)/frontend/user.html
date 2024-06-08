@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainBuster</title>
+    <link rel="stylesheet" href="./style/user.css">
+
+    <script>
+        // This function checks if the user is logged in.
+        // For this example, we'll use a simple check for a token in local storage.
+        function checkLoginStatus() {
+            // Replace 'your-token' with the actual key used for authentication
+            const token = localStorage.getItem('token');
+            if (!token) {
+                // Redirect to login page if the token is not present
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Run the checkLoginStatus function as soon as the script loads
+        checkLoginStatus();
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>BrainBuster</h1>
+        <div id="quiz-container">
+            <div id="quiz-header">
+                <label for="category">Select Category:</label>
+                <select id="category">
+                </select>
+                <button onclick="startQuiz()">Start Quiz</button>
+            </div>
+            <div id="quiz-body" style="display: none;">
+                <div id="question-container"></div>
+                <div id="navigation-buttons" style="display: none;">
+                    <button id="prev-button" onclick="prevPage()">Previous</button>
+                    <button id="next-button" onclick="nextPage()">Next</button>
+                    <button id="submit-button" style="display: none;" onclick="submitQuiz()">Submit Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
